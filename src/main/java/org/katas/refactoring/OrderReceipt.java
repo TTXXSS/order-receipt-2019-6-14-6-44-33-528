@@ -19,17 +19,16 @@ public class OrderReceipt {
         // print headers
         output.append("======Printing Orders======\n");
 
-        // print date, bill no, customer name
-//        output.append("Date - " + order.getDate();
+        // print  customer name and address
         output.append(o.getCustomerName());
         output.append(o.getCustomerAddress());
-//        output.append(order.getCustomerLoyaltyNumber());
 
-        // prints lineItems
+
+        // print lineItems
         double totSalesTx = 0d;
         double tot = 0d;
         for (LineItem lineItem : o.getLineItems()) {
-            output.append(lineItem.getDescription());
+            output.append(lineItem.getItemName());
             output.append('\t');
             output.append(lineItem.getPrice());
             output.append('\t');

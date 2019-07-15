@@ -7,10 +7,10 @@ package org.katas.refactoring;
  * total sales tax) and prints it.
  */
 public class OrderReceipt {
-    private Order o;
+    private Order order;
 
-    public OrderReceipt(Order o) {
-        this.o = o;
+    public OrderReceipt(Order order) {
+        this.order = order;
     }
 
     public String printReceipt() {
@@ -20,14 +20,14 @@ public class OrderReceipt {
         output.append("======Printing Orders======\n");
 
         // print  customer name and address
-        output.append(o.getCustomerName());
-        output.append(o.getCustomerAddress());
+        output.append(order.getCustomerName());
+        output.append(order.getCustomerAddress());
 
 
         // print lineItems
         double totSalesTx = 0d;
         double tot = 0d;
-        for (LineItem lineItem : o.getLineItems()) {
+        for (LineItem lineItem : order.getLineItems()) {
             output.append(lineItem.getItemName());
             output.append('\t');
             output.append(lineItem.getPrice());
